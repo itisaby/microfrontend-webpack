@@ -4,16 +4,15 @@ module.exports = {
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
-                use: [
-                    'source-map-loader',
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-react', '@babel/preset-env'],
-                            plugins: ['@babel/plugin-transform-runtime'],
-                        }
+                use:
+                {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react', '@babel/preset-env'],
+                        plugins: ['@babel/plugin-transform-runtime'],
                     }
-                ],
+                }
+                ,
 
             }
         ]

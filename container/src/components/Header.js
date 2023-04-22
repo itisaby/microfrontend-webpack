@@ -80,7 +80,7 @@ export default function Header({ signedIn, onSignOut }) {
             // component={RouterLink}
             // to="/"
           >
-            <Link to="/">
+            <Link href="/">
             Home
             </Link>
           </Typography>

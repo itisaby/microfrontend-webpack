@@ -1,13 +1,20 @@
-import { mount } from "marketing/MarketingApp";
-import React, { useEffect, useRef } from "react";
+import { mount } from 'marketing/MarketingApp';
+import React, { useRef, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
+export default () => {
+  const ref = useRef(null);
+  const history = useHistory();
 
-const MarketingApp = () => {
-    const ref = useRef(null);
-    useEffect(() => {
-            mount(ref.current);
-    })
-    return <div ref={ref} />;
-}
+  useEffect(() => {
+    // const { onParentNavigate } =
+     mount(ref.current),{
+      onNavigate: () => {
+        console.log('container onNavigate')
+      }
+     }
 
-export default MarketingApp
+  });
+
+  return <div ref={ref} />;
+};

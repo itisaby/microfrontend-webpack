@@ -10,15 +10,15 @@ const generateClassName = createGenerateClassName({
 
 function App() {
   return (
-    <StylesProvider generateClassName={generateClassName}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header />
           {/* <hr /> */}
           <MarketingApp />
         </div>
-      </BrowserRouter>
-    </StylesProvider>
+      </StylesProvider>
+    </BrowserRouter>
   )
 }
 

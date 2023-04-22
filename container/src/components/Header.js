@@ -4,7 +4,8 @@ import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
+import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -77,16 +78,18 @@ export default function Header({ signedIn, onSignOut }) {
             color="inherit"
             noWrap
             // component={RouterLink}
-            to="/"
+            // to="/"
           >
-            App
+            <Link to="/">
+            Home
+            </Link>
           </Typography>
           <Button
             color="primary"
             variant="outlined"
             className={classes.link}
             // component={RouterLink}
-            to={signedIn ? '/' : '/auth/signin'}
+            // to={signedIn ? '/' : '/auth/signin'}
             onClick={onClick}
           >
             {signedIn ? 'Logout' : 'Login'}

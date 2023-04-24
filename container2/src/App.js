@@ -1,8 +1,12 @@
 import React from 'react'
+import MyApp from './MyApp'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>App
+      <MyApp/>
+    </div>
   )
 }
 

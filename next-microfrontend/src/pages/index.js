@@ -1,6 +1,7 @@
-import dynamic from "next/dynamic";
 
-const Page = dynamic(() => import("./my_microfrontend/Page"));
+import Page from "./Page";
+
+// const Page = dynamic(() => import("./my_microfrontend/Page"));
 
 export default function Home() {
   return (
